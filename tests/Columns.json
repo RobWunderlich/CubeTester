@@ -1,0 +1,20 @@
+[
+    { 
+        "application" : "MSQ/MSQ Performance Sample App",
+        "tests" : [
+            {   "name" : "Variable Expression",
+                "dimensions": ["Customer"],
+                "measures" : ["$(vSales) ", "$(vQuantity)", "$(vSales) / $(vQuantity)"]
+            }, 
+            {   "name" : "Repeat Expression",
+                "dimensions": ["Customer"],
+                "measures" : ["Sum(LineTotal) ", "Sum(OrderQty)", "Sum(LineTotal) / Sum(OrderQty)"]
+            },
+            {   "name" : "Column Expression",
+                "dimensions": ["Customer"],
+                "measures" : ["Sum(LineTotal) ", "Sum(OrderQty)", "column(1) / column(2)"]
+            }
+                                 
+        ]
+    }
+]

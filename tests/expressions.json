@@ -1,0 +1,14 @@
+
+[
+{   "dimensions" : ["Product"],
+    "measures" : ["MAx(Aggr(SUM(\"LineTotal\") / Count(DISTINCT SalesOrderID), CustomerID))"]
+},
+
+{   "dimensions": ["Customer"],
+    "measures" : ["Sum(if(Size='L', LineTotal))"]
+},
+{   "dimensions": ["Customer"],
+    "measures" : ["sum({<Size={'L'}>} LineTotal)"]
+}
+]
+

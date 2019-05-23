@@ -1,0 +1,12 @@
+[
+    {   
+        "application" : "JoinPerf1"
+    },
+{   
+    "dimensions" : ["OrderId"],
+    "measures" : ["sum(\"LineTotal\")"]
+},
+{   "dimensions" : ["OrderId"],
+    "measures" : ["sum(\"LineTotal\")"]
+}
+]

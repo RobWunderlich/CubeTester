@@ -1,0 +1,32 @@
+[
+    { 
+        "application" : "MSQ/MSQ Performance Sample App",
+        "tests" : [
+            {   "name" : "sb invalid function",
+                "dimensions": ["Year"],
+                "measures" : ["Sumy(LineTttotal) ", "Sumx(OrderqqqQty)"]
+            },
+            {   "name" : "sb bad field names",
+                "dimensions": ["Year"],
+                "measures" : ["Sum(LineTttotal * OrderQty * fx)"]
+            },
+            {   "name" : "sb bad field names",
+                "dimensions": ["Year"],
+                "measures" : ["Sum(LineTotal * OrderQty * fx)"]
+            },
+            {   "name" : "sb bad field names",
+                "dimensions": ["Year"],
+                "measures" : ["right(Sum(LineTotal * OrderQty * fx), 1)"]
+            },
+            {   "name" : "sb bad field names",
+                "dimensions": ["Year"],
+                "measures" : ["Concat(Product, ',', ProductIdddd)"]
+            },
+            {   "name" : "does not detect bad field in aggr dim",
+                "dimensions": ["Year"],
+                "measures" : ["max(aggr(Sum(LineTotallll), Productttt))"]
+            }
+                                   
+        ]
+    }
+]

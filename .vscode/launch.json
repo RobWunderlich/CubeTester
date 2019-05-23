@@ -1,0 +1,87 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Index",
+            "program": "${workspaceFolder}\\Index.js",
+            "args": [
+                "test"
+                //,"tests/CountDistinct.json"
+                //,"--app", "MSQ Performance Sample App"
+                //,"--app", "JoinPerf2"
+                //,"--infile", "tests/Master Summit Question.json"
+                //,"--infile", "tests/CheckExpression.json"
+                ,"tests/CalculatedDims.json"
+                //,"--trace"
+                //,"--useCache"
+            ]
+            
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Columns",
+            "program": "${workspaceFolder}\\Index.js",
+            "args": [
+                "test"
+                ,"tests/Columns.json"
+                ,"--app", "MSQ/MSQ Performance Sample App"
+                ,"--useCache"
+            ]
+            
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Extract Desktop",
+            "program": "${workspaceFolder}\\Index.js",
+            "args": [
+                "extract"
+                ,"MSQ Performance Sample App"
+                ,"c:/$temp/extractedTests.json"
+                //"--app", "MSQ/MSQ Performance Sample App"
+                //,"--trace"
+                //,"--useCache"
+            ]
+            
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test Extract File",
+            "program": "${workspaceFolder}\\Index.js",
+            "args": [
+                "test"
+                ,"c:/$temp/extractedTests.json"
+                //,"--app", "DA Sample App"                
+                //"--app", "MSQ/MSQ Performance Sample App"
+                //,"--trace"
+                //,"--useCache"
+            ]
+            
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Server",
+            "program": "${workspaceFolder}\\CubeTester.js",
+            "args": [
+                "--infile", "tests/CVQS Expressions.json"
+                ,"--certPath", "C:\\VmShared\\Exported Certificates\\robwork"
+                ,"--app", "121da647-9b2d-4d14-97ae-2319d8e8fdc4"
+                ,"--endpoint", "wss://qliksense.lab.panalytics.com:4747"
+                ,"--user", "ROB"
+                ,"--domain", "LAB"
+                //,"--trace"
+                //,"--useCache"
+            ]
+            
+        },
+
+    ]
+}

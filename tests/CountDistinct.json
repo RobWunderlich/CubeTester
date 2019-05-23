@@ -1,0 +1,25 @@
+[
+    { 
+        "target" : {
+            "application" : "Test Count Distinct"
+        },        
+        "tests" : [
+            {   
+               "dimensions": ["Dim"],
+               "measures" : ["Sum(Counter)"]
+            },
+            {   
+                "dimensions": ["Dim"],
+                "measures" : ["Count(Counter)"]
+            },
+            {   
+                "dimensions": ["Dim"],
+                "measures" : ["Count(Id)"]
+            },
+            {   
+                "dimensions": ["Dim"],
+                "measures" : ["Count(Distinct Id)"]
+            }                        
+        ]
+    }
+]
