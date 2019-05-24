@@ -1,7 +1,8 @@
 [
     { 
         "target" : {
-            "application" : "MSQ Performance Sample App"
+            "app" : "MSQ Performance Sample App",
+            "repeat" : 3
         },        
         "tests" : [
             {   "name" : "Using plain names",
@@ -9,9 +10,6 @@
                 "measures" : ["Sum(LineTotal) ", "Sum(OrderQty)"]
             },
             {   "name" : "Using calc names",
-                "target" : {
-                    "useCache" : false
-                },
                 "dimensions": ["=Year", "=Month", "=Customer", "=Product"],
                 "measures" : ["Sum(LineTotal) ", "Sum(OrderQty)"]
             }                       

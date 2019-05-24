@@ -4,24 +4,28 @@
   "description": "Extract Qlik Sense data load script to text files.",
   "main": "ScriptExtract.js",
   "dependencies": {
-    "asyncawait": "^1.0.7",
     "enigma.js": "^2.2.1",
+    "esm": "^3.2.25",
     "fs": "0.0.1-security",
     "js-beautify": "^1.8.9",
     "jsonpath": "^1.0.0",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "ws": "^5.0.0",
-    "yargs": "^12.0.1"
+    "yargs": "^12.0.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobWunderlich/CubeTester.git"
   },
   "keywords": [
     "Qlik",
     "Sense"
   ],
   "author": "Rob Wunderlich",
-  "license": "ISC"
+  "license": "MIT"
 }

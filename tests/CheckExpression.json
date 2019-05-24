@@ -1,6 +1,8 @@
 [
     { 
-        "application" : "MSQ/MSQ Performance Sample App",
+        "target" : {
+            "app" : "MSQ Performance Sample App"
+        },
         "tests" : [
             {   "name" : "sb invalid function",
                 "dimensions": ["Year"],
@@ -12,7 +14,7 @@
             },
             {   "name" : "sb bad field names",
                 "dimensions": ["Year"],
-                "measures" : ["Sum(LineTotal * OrderQty * fx)"]
+                "measures" : ["Num(Sum(LineTotal * OrderQty * fx),'#,##0')"]
             },
             {   "name" : "sb bad field names",
                 "dimensions": ["Year"],

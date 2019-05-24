@@ -1,6 +1,9 @@
 [
     { 
-        "application" : "MSQ/MSQ Performance Sample App",
+        "target" : {
+            "app" : "MSQ Performance Sample App",
+            "repeat" : 3
+        },
         "tests" : [
             {   "name" : "Variable Expression",
                 "dimensions": ["Customer"],

@@ -1,7 +1,8 @@
 [
     { 
         "target" : {
-            "application" : "Test Count Distinct"
+            "app" : "Test Count Distinct",
+            "repeat": 1
         },        
         "tests" : [
             {   

@@ -1,0 +1,22 @@
+[
+    {
+        "target": {
+            "app": "MSQ Performance Sample App",
+            "endpoint": "ws://localhost:9076/"
+        },
+        "tests": [
+            {
+                "name": "Order Detail",
+                "dimensions": [
+                    "Customer",
+                    "OrderDate",
+					"Product"
+                ],
+                "measures": [
+                    "sum(OrderQty)",
+                    "sum(LineTotal)"
+                ]
+            }
+        ]
+    }
+]

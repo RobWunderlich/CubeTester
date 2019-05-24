@@ -1,0 +1,27 @@
+[
+    { 
+        "target" : {
+            "app" : "MSQ Performance Sample App"
+        },
+        "tests" : [
+            {   "name" : "Sums",
+                "dimensions": ["Customer"],
+                "measures" : ["Sum(LineTotal) - Sum(ListPrice)"]
+            }, 
+            {   "name" : "Operator first",
+                "dimensions": ["Customer"],
+                "measures" : ["Sum(LineTotal  - ListPrice)"]
+            },
+            {   "name" : "Agg first",
+                "dimensions": ["Customer"],
+                "measures" : ["Sum(LineTotal  * 1000)"]
+            },
+            {   "name" : "Agg last",
+                "dimensions": ["Customer"],
+                "measures" : ["Sum(LineTotal)  * 1000"]
+            }
+            
+                                 
+        ]
+    }
+]

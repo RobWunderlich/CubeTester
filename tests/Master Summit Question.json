@@ -1,7 +1,10 @@
 
 [
     { 
-        "application" : "MSQ/MSQ Performance Sample App",
+        "target" : {
+            "app" : "MSQ Performance Sample App",
+            "repeat": 3
+        },
         "tests" : [
             {   "name" : "using aggr",
                 "dimensions": ["Year", "Month"],
@@ -9,27 +12,8 @@
             },
             {   "dimensions" : ["Year", "Month"],
                 "measures" : ["Count(Distinct {<CustomerID={\"=Count(Distinct ProductID)>1\"} >} CustomerID)"]
-            },
-            {   "dimensions" : ["Year", "Month"],
-                "measures" : ["Count(ProductId)", "sum(LineTotall)"]
-            },
-            {   "dimensions" : ["Year", "Month"],
-                "measures" : ["Count(ProductID)", "sum(LineTotal)"]
             }
         ]
-    },
-    { 
-        "application" : "MSQ/MSQ Performance Sample App",
-        "tests" : [
-            {   "name" : "Test again",
-                "dimensions": ["Year", "Month"],
-                "measures" : ["-sum(aggr(Count(Distinct ProductID),CustomerID)>1) "]
-            },
-            {   "dimensions" : ["Year", "Month"],
-                "measures" : ["Count(Distinct {<CustomerID={\"=Count(Distinct ProductID)>1\"} >} CustomerID)"]
-            }
-        ]
-    } 
-    
+    }
 ]
     
