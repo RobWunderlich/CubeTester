@@ -1,5 +1,11 @@
+const cubeTester = require('./lib/CubeTester.js');
 //console.log('start ' + Date.now());
 const argv = require('yargs')
+// .command('test', 'Run tests from test input file',
+// 	async function (argv) {
+// 		await cubeTester(argv);
+//   }
+// )
 .commandDir('lib/commands')
 .option('app', {
 	alias: 'a',
