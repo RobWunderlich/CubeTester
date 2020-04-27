@@ -83,24 +83,6 @@ const runTest = async function (test, caseIndex, testIndex, session) {
 };
 module.exports = runTest;
 
-async function runTest2(app, test, result, objectDef) {
-	if (!test.target.useCache) {
-		let salt = new Date().getTime().toString().substr(-9);
-		objectDef.qHyperCubeDef.qMeasures.push({"qDef":{"qDef" : "="+salt}});
-	}					
-	object = await app.createSessionObject(objectDef);
-	var timingStart = Date.now();
-	let layout = await object.getLayout();
-	result.calctime = Date.now() - timingStart;
-	result.qSize = layout.qHyperCube.qSize;							
-	result.qGrandTotalRow = layout.qHyperCube.qGrandTotalRow;
-	if (!test.useCache) {	// If not using cache, remove the extra elements created by our unique-salt expression
-		result.qSize.qcx -= 1;
-		result.qGrandTotalRow.pop();
-	}
-	return testResult;
-}
-
 async function asyncForEach(array, callback) {
 	for (let index = 0; index < array.length; index++) {
 	  await callback(array[index], index, array);
