@@ -9,7 +9,7 @@
     "fs": "0.0.1-security",
     "js-beautify": "^1.8.9",
     "jsonpath": "^1.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mkdirp": "^0.5.1",
     "path": "^0.12.7",
     "ws": "^5.0.0",
