@@ -8,7 +8,7 @@ const sessionList = [];
 var findSession = async function (target) {
 	session = sessionList.find((element) => targetSessionEqual(element.target, target))
 	if (!session) {
-		session = getSession(target.endpoint, target.certPath, target.user, target.userDirectory, false);
+		session = getSession(target.endpoint, target.certPath, target.user, target.domain, false);
 		session.target = target;
 		sessionList.push(session);
 		session.global = await session.open();
