@@ -7,13 +7,13 @@
     "enigma.js": "^2.9.0",
     "esm": "^3.2.25",
     "fs": "0.0.1-security",
-    "js-beautify": "^1.14.2",
+    "js-beautify": "^1.14.3",
     "jsonpath": "^1.1.1",
     "lodash": "^4.17.21",
     "mkdirp": "^0.5.6",
     "path": "^0.12.7",
-    "ws": "^7.5.7",
-    "yargs": "^12.0.5"
+    "ws": "^7.5.8",
+    "yargs": "^13.1.2"
   },
   "devDependencies": {},
   "scripts": {
